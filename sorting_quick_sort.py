@@ -1,24 +1,24 @@
-def partition(arr,low,high):
-    pivot = arr[low]
+def partition(nums, low, high):
+    pivot = nums[low]
     i = low
     j = high
     while i < j:
-        while arr[i] <= pivot  and i <= high - 1 :
+        while nums[i] <= pivot  and i <= high - 1 :
             i+=1
-        while arr[j] > pivot and j >= low + 1:
+        while nums[j] > pivot and j >= low + 1:
             j-=1
         if i < j:
-            arr[i], arr[j] = arr[j], arr[i]
+            nums[i], nums[j] = nums[j], nums[i]
 
     #place the pivot to right position
-    arr[low], arr[j] = arr[j], arr[low]
+    nums[low], nums[j] = nums[j], nums[low]
     return j
 
-def quickSort(arr,low,high):
+def quickSort(nums, low, high):
     if low < high:
-        p = partition(arr,low,high)
-        quickSort(arr,low,p-1)
-        quickSort(arr,p+1,high)
+        p = partition(nums, low, high)
+        quickSort(nums, low, p - 1)
+        quickSort(nums, p + 1, high)
 
 
 arr = [3,4,5,1,5,6,7,0]
