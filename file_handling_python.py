@@ -17,6 +17,7 @@
 
 # how to open in both mode in read as well in write
 # first process should be read then write
+
 file_obj = open("file_1.txt","r+")
 data = file_obj.read()
 print(data)
