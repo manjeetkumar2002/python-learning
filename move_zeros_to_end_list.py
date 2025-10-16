@@ -37,6 +37,5 @@ def moveZeroesToEnd(nums):
             i += 1
         j += 1
 
-
 moveZeroesToEnd(nums)
 print(nums)
