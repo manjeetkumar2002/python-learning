@@ -5,15 +5,15 @@ target = 1
 def upper_bound(nums,target):
     low = 0
     high = len(nums)-1
-    result = len(nums)
+    ub = len(nums)
     while low <= high:
         mid = (low+high)//2
         if nums[mid]>target:
-            result = nums[mid]
+            ub = mid
             high = mid-1
 
         else:
             low = mid+1
-    return result
+    return ub
 
 print(upper_bound(nums,target))
