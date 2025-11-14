@@ -66,13 +66,13 @@ class SinglyLinkedList:
                     prev.next = temp.next
 
 
-list1 = SinglyLinkedList()
-list1.append(1)
-list1.append(2)
-list1.append(3)
-list1.append(4)
-print(list1)
-list1.insert_at(4,10)
-list1.delete(1)
-list1.delete(3)
-print(list1)
+# list1 = SinglyLinkedList()
+# list1.append(1)
+# list1.append(2)
+# list1.append(3)
+# list1.append(4)
+# print(list1)
+# list1.insert_at(4,10)
+# list1.delete(1)
+# list1.delete(3)
+# print(list1)
