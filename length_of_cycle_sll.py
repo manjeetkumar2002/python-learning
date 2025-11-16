@@ -5,23 +5,13 @@ def lengthOfLoop(head):
         slow = slow.next
         fast = fast.next.next
         if slow == fast:
-            break
-    if fast is None or fast.next is None:
-        return 0
-
-    slow = head
-    while fast != slow:
-        slow = slow.next
-        fast = fast.next
-
-    # find the length
-    temp = slow.next
-    length = 0
-    while temp != slow:
-        length = length + 1
-        temp = temp.next
-    length = length + 1
-    return length
+            slow = slow.next
+            count = 1
+            while slow != fast:
+                slow = slow.next
+                count += 1
+            return count
+    return 0
 
 #APPROACH 1: using dictionary
 def lengthOfLoop(head):
