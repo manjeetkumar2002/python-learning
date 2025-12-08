@@ -1,17 +1,13 @@
 from DoublyLinkedList import DoublyLinkedList
 
 def find_pairs(head,target):
-    # find the tail of dll
-    curr = head
-    tail = None
-    while curr.next is not None:
-        curr = curr.next
-    tail = curr
-    #Apply two pointer approach
     left = head
-    right = tail
+    right = head
     result = []
-    while left != right:
+    while right.next is not None:
+        right = right.next
+    #Apply two pointer approach
+    while left is not None and  right is not None and left.val < right.val:
         sum = left.val + right.val
         if sum == target:
             result.append([left.val,right.val])
@@ -33,4 +29,4 @@ dll.append(60)
 dll.append(70)
 
 
-print(find_pairs(dll.head,70))
+print("pairs are :",find_pairs(dll.head,70))
