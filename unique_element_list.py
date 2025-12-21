@@ -15,7 +15,6 @@ def unique_using_xor(list):
     ans = 0
     for i in range(len(list)):
         ans = ans ^ list[i]
-
     return ans
 print(unique(list))
 print(unique_using_xor(list))
