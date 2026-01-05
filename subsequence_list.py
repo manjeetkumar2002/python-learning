@@ -5,10 +5,10 @@ def solve(index,subset):
         result.append(subset.copy())
         return
 
-    # take the element
+    # Include the element
     subset.append(list[index])
     solve(index+1,subset)
-    # don't take the element
+    # Exclude the element
     subset.pop()
     solve(index+1,subset)
 
