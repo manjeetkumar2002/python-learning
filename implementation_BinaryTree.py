@@ -24,9 +24,26 @@ def preorder(root):
     print(root.value, end=" ")
     preorder(root.left)
     preorder(root.right)
-
+def postorder(root):
+    if root == None:
+        return
+    postorder(root.left)
+    postorder(root.right)
+    print(root.value, end=" ")
+def inorder(root):
+    if root == None:
+        return
+    inorder(root.left)
+    print(root.value, end=" ")
+    inorder(root.right)
 
 root = create_BT()
 print("\n\nPreorder Traversal : ")
 preorder(root)
 
+
+print("\n\nPostorder Traversal : ")
+postorder(root)
+
+print("\n\ninorder Traversal : ")
+inorder(root)
